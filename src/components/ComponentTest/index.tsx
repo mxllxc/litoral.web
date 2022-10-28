@@ -1,11 +1,7 @@
-import * as S from './styles';
+import * as S from "./styles";
 
 const ComponentTeste = () => {
-    return (
-        <S.Container>
-            TestComponent
-        </S.Container>
-    )
-}
+  return <S.Container>TestComponent</S.Container>;
+};
 
 export default ComponentTeste;

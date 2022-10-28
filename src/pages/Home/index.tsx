@@ -1,11 +1,12 @@
-import * as S from './styles'
+import Header from "./Header";
+import * as S from "./styles";
 
 const Home: React.FC = () => {
-    return (
-        <S.Container>
-            <h1>teste</h1>
-        </S.Container>
-    )
-}
+  return (
+    <S.Container>
+      <Header />
+    </S.Container>
+  );
+};
 
 export default Home;
