@@ -1,11 +1,13 @@
 import CustomDropdown from "../CustomDropdown";
 import * as S from "./styles";
+import  { redirect } from 'react-router-dom'
+
 const LitoralCar = require("src/assets/images/litoralcar.png");
 
 const Header = () => {
   return (
     <S.Container>
-      <img src={LitoralCar} alt="LitoralCar" />
+      <img src={LitoralCar} alt="LitoralCar" onClick={() => {redirect("/")}} />
       <S.ContainerInfo>
         <S.Content>
           <CustomDropdown

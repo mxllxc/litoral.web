@@ -12,10 +12,16 @@ code {
     monospace;
 }
 
+h2 {
+  font-size: x-large;
+  font-family: "Noto Sans Buhid", sans-serif;
+  font-weight: 400;
+}
+
 h3 {
   color: white;
   font-size: medium;
-  /* font-family: "Noto Sans Buhid", sans-serif; */
   font-family: "Raleway", sans-serif;
   font-weight: 400;
 }
+

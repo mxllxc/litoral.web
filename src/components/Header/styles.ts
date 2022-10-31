@@ -2,13 +2,15 @@ import styled from "styled-components";
 import { color } from "src/shared/utils/styles";
 
 export const Container = styled.div`
+  margin-top: 0;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 10px;
+  /* margin: 10px; */
   img {
     max-width: 150px;
+    cursor: pointer;
   }
 `;
 

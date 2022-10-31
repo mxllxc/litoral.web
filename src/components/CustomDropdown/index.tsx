@@ -18,8 +18,8 @@ const CustomDropdown = (props: Props) => {
           </span>
         }
       >
-        {props.itens.map((iten) => (
-          <Dropdown.Item href={iten.ref}>{iten.name}</Dropdown.Item>
+        {props.itens.map((iten, index) => (
+          <Dropdown.Item key={index} href={iten.ref}>{iten.name}</Dropdown.Item>
         ))}
       </NavDropdown>
     </S.MyDropdown>

@@ -2,6 +2,9 @@ import { Dropdown } from "react-bootstrap";
 import styled from "styled-components";
 
 export const MyDropdown = styled(Dropdown)`
+  font-size: medium;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
   .dropdown-toggle::after {
     display: none !important;
     :hover {
