@@ -8,5 +8,6 @@ export const Container = styled.div`
   background-position: center;
   background-size: cover;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 `;

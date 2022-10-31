@@ -1,4 +1,4 @@
-import Header from "./Header";
+import Header from "src/components/Header";
 import * as S from "./styles";
 
 const Home: React.FC = () => {
