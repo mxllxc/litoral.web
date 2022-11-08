@@ -1,5 +1,5 @@
-import { ButtonGroup, Dropdown, DropdownButton } from "react-bootstrap";
-import { color } from "src/shared/utils/styles";
+import { Button, Dropdown, DropdownButton, Form } from "react-bootstrap";
+import { Search } from "src/assets/icons";
 import * as S from "./styles";
 
 const Filter = () => {
@@ -8,7 +8,7 @@ const Filter = () => {
       <S.Content>
         <h2>O que voce procura?</h2>
         <div>
-          <input type="radio" checked />
+          <input type="radio" />
           <h4>Carro</h4>
           <input type="radio" />
           <h4>Moto</h4>
@@ -65,6 +65,50 @@ const Filter = () => {
             </Dropdown.Item>
           </DropdownButton>
         </div>
+        <Form.Select aria-label="Default select example">
+          <option>Marca</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </Form.Select>
+        <Form.Select aria-label="Default select example">
+          <option>Modelo</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </Form.Select>
+        <div>
+          <Form.Select aria-label="Default select example">
+            <option>Ano de</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </Form.Select>
+          <Form.Select aria-label="Default select example">
+            <option>Ano até</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </Form.Select>
+        </div>
+        <div>
+          <Form.Select aria-label="Default select example">
+            <option>Valor de</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </Form.Select>
+          <Form.Select aria-label="Default select example">
+            <option>Valor até</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </Form.Select>
+        </div>
+        <Button variant="primary">
+          <Search />
+          BUSCAR OFERTAS AGORA
+        </Button>
       </S.Content>
     </S.Container>
   );
