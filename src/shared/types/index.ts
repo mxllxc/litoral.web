@@ -3,6 +3,16 @@ import { Contador as ContadorDictionary } from "../utils/dictionary";
 //================================================
 // Envios para o back end
 
+export type Filtro = {
+  categoria: string;
+  marca: string;
+  modelo: string;
+  nome: string;
+  ano: number;
+  valor: number;
+  loja: number;
+};
+
 //================================================
 // Retornos do back end
 

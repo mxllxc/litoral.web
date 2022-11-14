@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Button, Dropdown, DropdownButton, Form } from "react-bootstrap";
 import { Search } from "src/assets/icons";
+import { Filtro } from "src/shared/types";
+import { Filtro as FiltroDictionary } from "src/shared/utils/dictionary";
 import * as S from "./styles";
 
 const Filter = () => {
@@ -26,14 +28,28 @@ const Filter = () => {
           </div>
         </S.HeaderFilter>
         {filterSelect ? (
-          <S.Content>
+          <S.Content
+            onSubmit={(event: { preventDefault: () => void }) => {
+              event.preventDefault();
+              const object: Filtro = {
+                [FiltroDictionary.CATEGORIA]: "",
+                [FiltroDictionary.MARCA]: "",
+                [FiltroDictionary.MODELO]: "",
+                [FiltroDictionary.NOME]: "",
+                [FiltroDictionary.ANO]: 0,
+                [FiltroDictionary.VALOR]: 0,
+                [FiltroDictionary.LOJA]: 0,
+              };
+              console.log(object);
+            }}
+          >
             <h2>O que voce procura?</h2>
             <div>
-              <input type="radio" />
+              <input name="modelo" type="radio" />
               <h4>Carro</h4>
-              <input type="radio" />
+              <input name="modelo" type="radio" />
               <h4>Moto</h4>
-              <input type="radio" />
+              <input name="modelo" type="radio" />
               <h4>Caminhão</h4>
               <DropdownButton
                 key="end"
@@ -44,43 +60,43 @@ const Filter = () => {
               >
                 <Dropdown.Item eventKey="1">
                   <span>
-                    <input type="radio" />
+                    <input name="modelo" type="radio" />
                     Carreta
                   </span>
                 </Dropdown.Item>
                 <Dropdown.Item eventKey="1">
                   <span>
-                    <input type="radio" />
+                    <input name="modelo" type="radio" />
                     Implemento rod.
                   </span>
                 </Dropdown.Item>
                 <Dropdown.Item eventKey="1">
                   <span>
-                    <input type="radio" />
+                    <input name="modelo" type="radio" />
                     Motor home
                   </span>
                 </Dropdown.Item>
                 <Dropdown.Item eventKey="1">
                   <span>
-                    <input type="radio" />
+                    <input name="modelo" type="radio" />
                     Ônibus
                   </span>
                 </Dropdown.Item>
                 <Dropdown.Item eventKey="1">
                   <span>
-                    <input type="radio" />
+                    <input name="modelo" type="radio" />
                     Patinete
                   </span>
                 </Dropdown.Item>
                 <Dropdown.Item eventKey="1">
                   <span>
-                    <input type="radio" />
+                    <input name="modelo" type="radio" />
                     Quadriciculo/triciculo
                   </span>
                 </Dropdown.Item>
                 <Dropdown.Item eventKey="1">
                   <span>
-                    <input type="radio" />
+                    <input name="modelo" type="radio" />
                     Trator/maquinas
                   </span>
                 </Dropdown.Item>
@@ -126,7 +142,7 @@ const Filter = () => {
                 <option value="3">Three</option>
               </Form.Select>
             </div>
-            <Button className="search" variant="primary">
+            <Button type="submit" className="search" variant="primary">
               <Search />
               BUSCAR OFERTAS AGORA
             </Button>
